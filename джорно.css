@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+header{
+    background-color: yellow;
+    padding: 50px 100px;
+    background-image: url('https://newcdn.igromania.ru/mnt/news/e/2/4/5/d/5/101605/238c1cb7bff4d85f_original.webp');
+    background-position-y: -150px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    color: black;
+}
+
+header > p {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 174, 0);
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    padding: 50px 100px;
+}
+
+section:nth-child(1){
+    grid-row: span 2;
+}
+
+section:nth-child(2){
+    grid-row: span 3;
+}
+
+section:nth-child(3){
+margin-top: 25px;
+}
+
+h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 24px;
+}
+
+@media (max-width: 900px) {
+    * {
+        grid-template-columns: 1fr !important;
+    }
+    header > img  {
+        width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+    main  {
+        display: block;
+    }
+    h2 {
+        margin: 25px 0;
+    }
+
+}
